@@ -29,20 +29,11 @@ public class MineSweeper {
         int numberOfMines = (this.row * this.col) / 4;
         Random random = new Random();
 
-        System.out.println(numberOfMines);
-
         while (numberOfMines > 0) {
             int randomRow = random.nextInt(this.row);
             int randomCol = random.nextInt(this.col);
             mines [randomRow][randomCol] = "*";
             numberOfMines--;
-        }
-
-        for  (String i[] : mines) {
-            for (String j : i) {
-                System.out.print(j + " ");
-            }
-            System.out.println();
         }
         
         for (int i = 0; i < this.row; i++) {
